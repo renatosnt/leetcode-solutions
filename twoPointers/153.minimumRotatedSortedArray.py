@@ -7,5 +7,19 @@ class Solution:
         # o problema está resolvido.
         minElement = float("inf")
 
-        minElement = min(minElement, temp)
+        # relembrando a busca binária
+        l, r = 0, len(nums) - 1
+
+        while l <= r:
+          mid = l + (r - l) / 2
+          if nums[mid] < target:
+            #segunda metade
+            l = mid + 1
+          elif nums[mid] > target:
+            # primeira metade
+            r = mid - 1
+          else:
+            # encontramos
+
+        # minElement = min(minElement, temp)
         return minElement 
